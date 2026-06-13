@@ -24,7 +24,7 @@ export default function LanguageSwitcher() {
     <button
       onClick={handleSwitch}
       disabled={isPending}
-      className="flex items-center gap-1.5 rounded-full border border-phd-primary px-3 py-1.5 text-sm font-semibold text-phd-primary transition-colors duration-200 hover:bg-phd-primary hover:text-white disabled:opacity-50"
+      className="flex items-center gap-1.5 rounded-full border border-white/40 px-3 py-1.5 text-sm font-semibold text-white transition-colors duration-200 hover:border-phd-gold hover:text-phd-gold disabled:opacity-50"
       aria-label={`Switch to ${label}`}
     >
       <Globe size={15} />

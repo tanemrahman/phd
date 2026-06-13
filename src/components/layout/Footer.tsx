@@ -32,15 +32,16 @@ export default function Footer() {
     <footer className="bg-phd-dark text-phd-gray">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-1">
-          <div className="mb-4 flex items-center gap-3">
-            <Image
-              src="/logo.jpg"
-              alt="PHD"
-              width={48}
-              height={48}
-              className="h-11 w-11 rounded-md object-contain"
-            />
-            <span className="text-lg font-extrabold text-white">PHD</span>
+          <div className="mb-4">
+            <span className="inline-block rounded-lg bg-white/5 p-2 ring-1 ring-white/10">
+              <Image
+                src="/logo.jpg"
+                alt="Partners in Health and Development"
+                width={135}
+                height={154}
+                className="h-24 w-auto object-contain"
+              />
+            </span>
           </div>
           <p className="text-sm leading-relaxed text-phd-gray/80">{t('about')}</p>
           <div className="mt-5 flex gap-3">

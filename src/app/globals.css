@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  /* PHD brand palette — derived from the logo's deep teal/slate + health tones */
+  /* PHD brand palette — navy from the logo + health tones */
+  --color-phd-navy: #13375A;
+  --color-phd-navy-dark: #0E2A47;
   --color-phd-primary: #0E4D64;
   --color-phd-primary-dark: #093949;
   --color-phd-primary-light: #15677F;

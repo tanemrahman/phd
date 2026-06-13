@@ -55,6 +55,23 @@ function Content() {
             <ContactForm />
           </div>
         </div>
+
+        {/* Map */}
+        <div className="mx-auto mt-14 max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-5 text-xl font-bold text-phd-dark">{t('mapTitle')}</h2>
+          <div className="overflow-hidden rounded-2xl border border-phd-gray shadow-sm">
+            <iframe
+              title="PHD office location"
+              src="https://www.google.com/maps?q=Gulshan-1%2C%20Dhaka-1212%2C%20Bangladesh&z=15&output=embed"
+              width="100%"
+              height="420"
+              style={{border: 0}}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+        </div>
       </section>
     </>
   );

@@ -125,8 +125,42 @@
   },
   "news": {
     "title": "News & Media",
-    "subtitle": "Latest updates, stories, and announcements from PHD.",
-    "empty": "Stories and updates will appear here soon."
+    "subtitle": "Latest updates, success stories, and announcements from across our programs.",
+    "empty": "Stories and updates will appear here soon.",
+    "featured": "Featured Story",
+    "all": "All",
+    "latest": "Latest Articles",
+    "minRead": "min read",
+    "share": "Share",
+    "related": "Related stories",
+    "back": "Back to News",
+    "published": "Published",
+    "cat": {
+      "health": "Public Health",
+      "humanitarian": "Humanitarian",
+      "capacity": "Capacity Development",
+      "research": "Research",
+      "climate": "Climate Resilience"
+    }
+  },
+  "approach": {
+    "title": "How we create lasting impact",
+    "subtitle": "A proven, partnership-driven approach — from understanding needs to sustaining results.",
+    "s1Title": "Listen & Assess",
+    "s1Desc": "We start with communities, partners and evidence to understand real needs.",
+    "s2Title": "Design Together",
+    "s2Desc": "We co-design solutions with local stakeholders and government.",
+    "s3Title": "Implement & Strengthen",
+    "s3Desc": "We deliver programs while building local capacity and systems.",
+    "s4Title": "Sustain & Scale",
+    "s4Desc": "We measure impact and hand over ownership for lasting change.",
+    "focusTitle": "Where we focus",
+    "focusSubtitle": "Our work spans the issues that matter most to vulnerable communities.",
+    "f1": "Public Health",
+    "f2": "Humanitarian Response",
+    "f3": "Climate Resilience",
+    "f4": "Gender Equality",
+    "f5": "Capacity Development"
   },
   "getInvolved": {
     "title": "Get Involved",
@@ -155,7 +189,8 @@
     "formSubject": "Subject",
     "formMessage": "Your Message",
     "formSubmit": "Send Message",
-    "formSuccess": "Thank you! Your message has been received."
+    "formSuccess": "Thank you! Your message has been received.",
+    "mapTitle": "Find us on the map"
   },
   "footer": {
     "about": "Partners in Health and Development (PHD) — improving health through strengthening management.",

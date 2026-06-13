@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <>
       {/* top utility bar */}
-      <div className="hidden bg-phd-primary-dark text-white md:block">
+      <div className="hidden bg-phd-navy-dark text-white md:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-xs sm:px-6 lg:px-8">
           <span className="font-medium text-white/85">{tt('tagline')}</span>
           <div className="flex items-center gap-5">
@@ -49,23 +49,17 @@ export default function Header() {
         </div>
       </div>
 
-      <header className="sticky top-0 z-50 border-b border-phd-gray bg-white/95 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-phd-navy shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-3" aria-label="PHD Home">
+        <Link href="/" className="flex items-center" aria-label="PHD — Partners in Health and Development">
           <Image
             src="/logo.jpg"
             alt="Partners in Health and Development"
-            width={56}
-            height={56}
-            className="h-12 w-12 rounded-md object-contain"
+            width={135}
+            height={154}
+            className="h-16 w-auto object-contain sm:h-20"
             priority
           />
-          <span className="hidden flex-col leading-tight sm:flex">
-            <span className="text-lg font-extrabold tracking-tight text-phd-primary">PHD</span>
-            <span className="text-[11px] font-medium text-phd-muted">
-              Partners in Health and Development
-            </span>
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -75,8 +69,8 @@ export default function Header() {
               href={item.href}
               className={`rounded-md px-3 py-2 text-sm font-semibold transition-colors ${
                 isActive(item.href)
-                  ? 'text-phd-primary'
-                  : 'text-phd-dark hover:text-phd-primary'
+                  ? 'text-phd-gold'
+                  : 'text-white/90 hover:text-phd-gold'
               }`}
             >
               {t(item.key)}
@@ -88,13 +82,13 @@ export default function Header() {
           <LanguageSwitcher />
           <Link
             href="/contact"
-            className="hidden rounded-full bg-phd-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-phd-primary-dark md:inline-block"
+            className="hidden rounded-full bg-phd-gold px-4 py-2 text-sm font-bold text-phd-dark transition-transform hover:scale-105 md:inline-block"
           >
             {t('contact')}
           </Link>
           <button
             onClick={() => setOpen((v) => !v)}
-            className="rounded-md p-2 text-phd-primary lg:hidden"
+            className="rounded-md p-2 text-white lg:hidden"
             aria-label="Toggle menu"
           >
             {open ? <X size={24} /> : <Menu size={24} />}
@@ -103,7 +97,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-phd-gray bg-white lg:hidden">
+        <nav className="border-t border-white/10 bg-phd-navy lg:hidden">
           <div className="mx-auto max-w-7xl px-4 py-2 sm:px-6">
             {[...NAV, {href: '/contact', key: 'contact'}].map((item) => (
               <Link
@@ -112,8 +106,8 @@ export default function Header() {
                 onClick={() => setOpen(false)}
                 className={`block rounded-md px-3 py-3 text-sm font-semibold transition-colors ${
                   isActive(item.href)
-                    ? 'bg-phd-light text-phd-primary'
-                    : 'text-phd-dark hover:bg-phd-light'
+                    ? 'bg-white/10 text-phd-gold'
+                    : 'text-white/90 hover:bg-white/10'
                 }`}
               >
                 {t(item.key)}

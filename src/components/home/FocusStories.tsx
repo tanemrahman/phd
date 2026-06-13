@@ -7,9 +7,9 @@ import Reveal from '@/components/shared/Reveal';
 import {IMG} from '@/lib/images';
 
 const STORIES = [
-  {img: IMG.childrenCommunity, tag: 's1Tag', title: 's1Title', excerpt: 's1Excerpt'},
-  {img: IMG.relief, tag: 's2Tag', title: 's2Title', excerpt: 's2Excerpt'},
-  {img: IMG.volunteer, tag: 's3Tag', title: 's3Title', excerpt: 's3Excerpt'},
+  {img: IMG.healthWorker, slug: 'strengthening-community-health-systems', tag: 's1Tag', title: 's1Title', excerpt: 's1Excerpt'},
+  {img: IMG.relief, slug: 'emergency-response-climate-affected-areas', tag: 's2Tag', title: 's2Title', excerpt: 's2Excerpt'},
+  {img: IMG.classroom, slug: 'training-next-generation-changemakers', tag: 's3Tag', title: 's3Title', excerpt: 's3Excerpt'},
 ] as const;
 
 export default function FocusStories() {
@@ -34,7 +34,7 @@ export default function FocusStories() {
           {STORIES.map((s, i) => (
             <Reveal key={s.title} as="article" delay={i * 100}>
               <Link
-                href="/news"
+                href={`/news/${s.slug}`}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-phd-gray bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">

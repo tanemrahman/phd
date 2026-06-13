@@ -3,6 +3,7 @@ import {useTranslations} from 'next-intl';
 import {Target, Eye, ShieldCheck} from 'lucide-react';
 import PageHero from '@/components/shared/PageHero';
 import CTABanner from '@/components/home/CTABanner';
+import FocusAreas from '@/components/home/FocusAreas';
 import {IMG} from '@/lib/images';
 import type {Metadata} from 'next';
 
@@ -52,6 +53,7 @@ function AboutContent() {
         </div>
       </section>
 
+      <FocusAreas />
       <CTABanner />
     </>
   );
