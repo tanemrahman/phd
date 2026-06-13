@@ -62,7 +62,7 @@ function Content() {
           <div className="overflow-hidden rounded-2xl border border-phd-gray shadow-sm">
             <iframe
               title="PHD office location"
-              src="https://www.google.com/maps?q=Gulshan-1%2C%20Dhaka-1212%2C%20Bangladesh&z=15&output=embed"
+              src="https://www.google.com/maps?q=House%20SWD%2012%2FA%2C%20Road%2008%2C%20Gulshan-1%2C%20Dhaka-1212%2C%20Bangladesh&z=17&output=embed"
               width="100%"
               height="420"
               style={{border: 0}}

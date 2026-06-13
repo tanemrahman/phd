@@ -121,7 +121,23 @@
   "where": {
     "title": "Where We Work",
     "subtitle": "Reaching vulnerable and marginalized communities across Bangladesh.",
-    "body": "From the coastal climate-vulnerable belt to remote rural districts and urban informal settlements, our programs span the country in partnership with local and national stakeholders."
+    "body": "From the coastal climate-vulnerable belt to remote rural districts and urban informal settlements, our programs span the country in partnership with local and national stakeholders.",
+    "reachTitle": "National reach, local impact",
+    "reachSubtitle": "Working across all eight divisions of Bangladesh.",
+    "statDivisions": "Divisions",
+    "statDistricts": "Districts nationwide",
+    "statYears": "Years on the ground",
+    "divisionsTitle": "Our divisions of operation",
+    "div": {
+      "dhaka": "Dhaka",
+      "chattogram": "Chattogram",
+      "khulna": "Khulna",
+      "rajshahi": "Rajshahi",
+      "sylhet": "Sylhet",
+      "barishal": "Barishal",
+      "rangpur": "Rangpur",
+      "mymensingh": "Mymensingh"
+    }
   },
   "news": {
     "title": "News & Media",
@@ -170,7 +186,17 @@
     "consulting": "Consultancy",
     "consultingDesc": "Collaborate with us as an individual consultant or firm.",
     "partnership": "Partnerships",
-    "partnershipDesc": "Build strategic partnerships to expand our shared impact."
+    "partnershipDesc": "Build strategic partnerships to expand our shared impact.",
+    "whyTitle": "Why partner with PHD",
+    "whySubtitle": "Three decades of trusted, accountable, community-led development.",
+    "w1Title": "30+ Years",
+    "w1Desc": "Proven track record across public health and humanitarian work.",
+    "w2Title": "Trusted Network",
+    "w2Desc": "Working with government, UN agencies and global donors.",
+    "w3Title": "Full Transparency",
+    "w3Desc": "Transparent grant and financial management you can rely on.",
+    "w4Title": "Local Ownership",
+    "w4Desc": "Community-led solutions built to last beyond every project."
   },
   "cta": {
     "title": "Let's build healthier communities together",

@@ -1,8 +1,10 @@
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {useTranslations} from 'next-intl';
 import {Link} from '@/i18n/navigation';
-import {Briefcase, Users, Handshake, ArrowRight} from 'lucide-react';
+import {Briefcase, Users, Handshake, ArrowRight, Award, Globe, ShieldCheck, Sprout} from 'lucide-react';
 import PageHero from '@/components/shared/PageHero';
+import SectionHeading from '@/components/shared/SectionHeading';
+import Reveal from '@/components/shared/Reveal';
 import {IMG} from '@/lib/images';
 import type {Metadata} from 'next';
 
@@ -30,6 +32,13 @@ function Content() {
     {Icon: Handshake, title: t('partnership'), body: t('partnershipDesc')},
   ];
 
+  const why = [
+    {Icon: Award, title: t('w1Title'), body: t('w1Desc')},
+    {Icon: Globe, title: t('w2Title'), body: t('w2Desc')},
+    {Icon: ShieldCheck, title: t('w3Title'), body: t('w3Desc')},
+    {Icon: Sprout, title: t('w4Title'), body: t('w4Desc')},
+  ];
+
   return (
     <>
       <PageHero title={t("title")} subtitle={t("subtitle")} image={IMG.volunteer} />
@@ -55,6 +64,32 @@ function Content() {
               </Link>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Why partner — infographic band */}
+      <section className="bg-phd-light py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <SectionHeading title={t('whyTitle')} subtitle={t('whySubtitle')} />
+          </Reveal>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {why.map(({Icon, title, body}, i) => (
+              <Reveal as="div" key={title} delay={(i % 4) * 90}>
+                <div className="relative h-full overflow-hidden rounded-2xl bg-white p-7 text-center shadow-sm ring-1 ring-phd-gray">
+                  <span
+                    className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-phd-primary to-phd-accent"
+                    aria-hidden
+                  />
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-phd-primary to-phd-accent text-white shadow-md">
+                    <Icon size={28} />
+                  </div>
+                  <h3 className="mt-5 text-lg font-extrabold text-phd-dark">{title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-phd-muted">{body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
     </>
