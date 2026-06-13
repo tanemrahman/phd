@@ -3,6 +3,7 @@ import {useTranslations} from 'next-intl';
 import {Link} from '@/i18n/navigation';
 import {MapPin, Mail, Phone} from 'lucide-react';
 import {Facebook, Instagram, Twitter, Youtube, Linkedin, WhatsApp} from '@/components/shared/BrandIcons';
+import {PROGRAMS} from '@/lib/programs';
 
 const SOCIALS = [
   {href: 'https://www.facebook.com/', label: 'Facebook', Icon: Facebook},
@@ -14,11 +15,14 @@ const SOCIALS = [
 ];
 
 const QUICK_LINKS = [
-  {href: '/about', key: 'about'},
+  {href: '/about', key: 'aboutUs'},
   {href: '/what-we-do', key: 'whatWeDo'},
   {href: '/where-we-work', key: 'whereWeWork'},
+  {href: '/projects', key: 'projects'},
+  {href: '/knowledge', key: 'annualReports'},
+  {href: '/transparency', key: 'auditReports'},
+  {href: '/careers', key: 'careers'},
   {href: '/news', key: 'news'},
-  {href: '/get-involved', key: 'getInvolved'},
   {href: '/contact', key: 'contact'},
 ] as const;
 
@@ -80,18 +84,16 @@ export default function Footer() {
             {t('programs')}
           </h3>
           <ul className="space-y-2.5 text-sm">
-            {['grant', 'implementation', 'technical', 'capacity', 'academic', 'humanitarian'].map(
-              (k) => (
-                <li key={k}>
-                  <Link
-                    href="/what-we-do"
-                    className="text-phd-gray/80 transition-colors hover:text-white"
-                  >
-                    {tp(`${k}.title`)}
-                  </Link>
-                </li>
-              )
-            )}
+            {PROGRAMS.map(({key, slug}) => (
+              <li key={key}>
+                <Link
+                  href={`/what-we-do/${slug}`}
+                  className="text-phd-gray/80 transition-colors hover:text-white"
+                >
+                  {tp(`${key}.title`)}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 

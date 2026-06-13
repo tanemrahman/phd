@@ -16,11 +16,13 @@ export type ProgramKey =
   | 'academic'
   | 'humanitarian';
 
-export const PROGRAMS: {key: ProgramKey; Icon: LucideIcon}[] = [
-  {key: 'grant', Icon: Landmark},
-  {key: 'implementation', Icon: Rocket},
-  {key: 'technical', Icon: Wrench},
-  {key: 'capacity', Icon: GraduationCap},
-  {key: 'academic', Icon: BookOpen},
-  {key: 'humanitarian', Icon: HeartHandshake},
+export const PROGRAMS: {key: ProgramKey; slug: string; Icon: LucideIcon}[] = [
+  {key: 'grant', slug: 'grant-management', Icon: Landmark},
+  {key: 'implementation', slug: 'program-implementation', Icon: Rocket},
+  {key: 'technical', slug: 'technical-assistance', Icon: Wrench},
+  {key: 'capacity', slug: 'capacity-development', Icon: GraduationCap},
+  {key: 'academic', slug: 'academic', Icon: BookOpen},
+  {key: 'humanitarian', slug: 'humanitarian-response', Icon: HeartHandshake},
 ];
+
+export const programBySlug = (slug: string) => PROGRAMS.find((p) => p.slug === slug);
