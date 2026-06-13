@@ -29,26 +29,20 @@ function Content() {
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-5 lg:px-8">
-          <div className="lg:col-span-2">
-            <h2 className="text-xl font-bold text-phd-dark">{t('office')}</h2>
-            <ul className="mt-5 space-y-4 text-sm text-phd-muted">
-              <li className="flex gap-3">
-                <MapPin size={20} className="mt-0.5 shrink-0 text-phd-accent" />
-                <span>{t('address')}</span>
-              </li>
-              <li className="flex gap-3">
-                <Mail size={20} className="shrink-0 text-phd-accent" />
-                <a href="mailto:kalam@phd-bd.com" className="hover:text-phd-primary">
-                  kalam@phd-bd.com
-                </a>
-              </li>
-              <li className="flex gap-3">
-                <Phone size={20} className="shrink-0 text-phd-accent" />
-                <a href="tel:+8801716029405" className="hover:text-phd-primary">
-                  +880 1716-029405
-                </a>
-              </li>
-            </ul>
+          <div className="space-y-4 lg:col-span-2">
+            <ContactCard Icon={MapPin} label={t('office')}>
+              {t('address')}
+            </ContactCard>
+            <ContactCard Icon={Mail} label={t('emailLabel')}>
+              <a href="mailto:kalam@phd-bd.com" className="transition-colors hover:text-phd-primary">
+                kalam@phd-bd.com
+              </a>
+            </ContactCard>
+            <ContactCard Icon={Phone} label={t('phoneLabel')}>
+              <a href="tel:+8801716029405" className="transition-colors hover:text-phd-primary">
+                +880 1716-029405
+              </a>
+            </ContactCard>
           </div>
 
           <div className="rounded-2xl border border-phd-gray bg-phd-light p-7 lg:col-span-3">
@@ -74,5 +68,27 @@ function Content() {
         </div>
       </section>
     </>
+  );
+}
+
+function ContactCard({
+  Icon,
+  label,
+  children,
+}: {
+  Icon: typeof MapPin;
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex gap-4 rounded-2xl border border-phd-gray bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-phd-accent hover:shadow-lg">
+      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-phd-primary/10 text-phd-primary">
+        <Icon size={22} />
+      </span>
+      <div>
+        <h3 className="text-sm font-bold uppercase tracking-wide text-phd-primary">{label}</h3>
+        <p className="mt-1 text-sm leading-relaxed text-phd-muted">{children}</p>
+      </div>
+    </div>
   );
 }
