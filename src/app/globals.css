@@ -15,6 +15,11 @@
 
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-bangla: var(--font-bangla), var(--font-inter), sans-serif;
+
+  /* animations */
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-kenburns: kenburns 14s ease-out both;
 }
 
 :root {
@@ -36,4 +41,54 @@ body {
 /* Apply Bangla-friendly font stack when locale is Bangla */
 html[lang="bn"] body {
   font-family: var(--font-bangla);
+}
+
+/* ---------- keyframes ---------- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.12); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+}
+.reveal.is-visible {
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; }
+  .reveal.is-visible { animation: none; }
+  .animate-kenburns,
+  .animate-float { animation: none !important; }
+}
+
+/* ---------- helpers ---------- */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: var(--animate-marquee);
+}
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.text-balance {
+  text-wrap: balance;
 }

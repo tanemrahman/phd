@@ -3,6 +3,7 @@ import {useTranslations} from 'next-intl';
 import {MapPin, Mail, Phone} from 'lucide-react';
 import PageHero from '@/components/shared/PageHero';
 import ContactForm from '@/components/shared/ContactForm';
+import {IMG} from '@/lib/images';
 import type {Metadata} from 'next';
 
 type Props = {params: Promise<{locale: string}>};
@@ -24,7 +25,7 @@ function Content() {
 
   return (
     <>
-      <PageHero title={t('title')} subtitle={t('subtitle')} />
+      <PageHero title={t("title")} subtitle={t("subtitle")} image={IMG.meeting} />
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-5 lg:px-8">

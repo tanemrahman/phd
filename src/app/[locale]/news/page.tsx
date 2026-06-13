@@ -2,6 +2,7 @@ import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {useTranslations} from 'next-intl';
 import {Newspaper} from 'lucide-react';
 import PageHero from '@/components/shared/PageHero';
+import {IMG} from '@/lib/images';
 import type {Metadata} from 'next';
 
 type Props = {params: Promise<{locale: string}>};
@@ -23,7 +24,7 @@ function Content() {
 
   return (
     <>
-      <PageHero title={t('title')} subtitle={t('subtitle')} />
+      <PageHero title={t("title")} subtitle={t("subtitle")} image={IMG.classroom} />
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">

@@ -1,12 +1,18 @@
+import Image from 'next/image';
+
 type Props = {
   title: string;
   subtitle?: string;
+  image?: string;
 };
 
-export default function PageHero({title, subtitle}: Props) {
+export default function PageHero({title, subtitle, image}: Props) {
   return (
     <section className="relative overflow-hidden bg-phd-primary text-white">
-      <div className="absolute inset-0 bg-gradient-to-br from-phd-primary-dark via-phd-primary to-phd-primary-light" />
+      {image && (
+        <Image src={image} alt="" fill priority sizes="100vw" className="object-cover" />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-br from-phd-primary-dark/95 via-phd-primary/90 to-phd-primary-light/80" />
       <div
         className="absolute inset-0 opacity-[0.07]"
         style={{
@@ -15,9 +21,12 @@ export default function PageHero({title, subtitle}: Props) {
         }}
         aria-hidden
       />
-      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">{title}</h1>
-        {subtitle && <p className="mt-3 max-w-2xl text-lg text-white/85">{subtitle}</p>}
+      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <span className="mb-3 inline-block h-1 w-12 rounded-full bg-phd-gold" aria-hidden />
+        <h1 className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
+          {title}
+        </h1>
+        {subtitle && <p className="mt-3 max-w-2xl text-lg text-white/90">{subtitle}</p>}
       </div>
     </section>
   );

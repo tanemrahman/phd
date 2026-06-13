@@ -4,8 +4,10 @@ import {useState} from 'react';
 import Image from 'next/image';
 import {useTranslations} from 'next-intl';
 import {Link, usePathname} from '@/i18n/navigation';
+import {useTranslations as useT} from 'next-intl';
 import LanguageSwitcher from '@/components/shared/LanguageSwitcher';
-import {Menu, X} from 'lucide-react';
+import {Facebook, Twitter, Linkedin} from '@/components/shared/BrandIcons';
+import {Menu, X, Mail, Phone} from 'lucide-react';
 
 const NAV = [
   {href: '/', key: 'home'},
@@ -18,6 +20,7 @@ const NAV = [
 
 export default function Header() {
   const t = useTranslations('nav');
+  const tt = useT('topbar');
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -25,7 +28,28 @@ export default function Header() {
     href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-phd-gray bg-white/95 backdrop-blur">
+    <>
+      {/* top utility bar */}
+      <div className="hidden bg-phd-primary-dark text-white md:block">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-xs sm:px-6 lg:px-8">
+          <span className="font-medium text-white/85">{tt('tagline')}</span>
+          <div className="flex items-center gap-5">
+            <a href="mailto:kalam@phd-bd.com" className="flex items-center gap-1.5 text-white/85 hover:text-white">
+              <Mail size={13} /> kalam@phd-bd.com
+            </a>
+            <a href="tel:+8801716029405" className="flex items-center gap-1.5 text-white/85 hover:text-white">
+              <Phone size={13} /> +880 1716-029405
+            </a>
+            <span className="flex items-center gap-3 border-l border-white/20 pl-4">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white/80 hover:text-phd-gold"><Facebook size={14} /></a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-white/80 hover:text-phd-gold"><Twitter size={14} /></a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-white/80 hover:text-phd-gold"><Linkedin size={14} /></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <header className="sticky top-0 z-50 border-b border-phd-gray bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3" aria-label="PHD Home">
           <Image
@@ -98,6 +122,7 @@ export default function Header() {
           </div>
         </nav>
       )}
-    </header>
+      </header>
+    </>
   );
 }

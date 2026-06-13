@@ -3,6 +3,7 @@ import {useTranslations} from 'next-intl';
 import {MapPin} from 'lucide-react';
 import PageHero from '@/components/shared/PageHero';
 import CTABanner from '@/components/home/CTABanner';
+import {IMG} from '@/lib/images';
 import type {Metadata} from 'next';
 
 type Props = {params: Promise<{locale: string}>};
@@ -35,7 +36,7 @@ function Content() {
 
   return (
     <>
-      <PageHero title={t('title')} subtitle={t('subtitle')} />
+      <PageHero title={t("title")} subtitle={t("subtitle")} image={IMG.childrenCommunity} />
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">

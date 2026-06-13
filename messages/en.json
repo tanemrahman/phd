@@ -20,7 +20,57 @@
     "title": "Partners in Health and Development",
     "subtitle": "A national non-profit with over 30 years of experience improving the health and wellbeing of vulnerable and marginalized populations across Bangladesh.",
     "ctaPrimary": "Explore Our Work",
-    "ctaSecondary": "Get Involved"
+    "ctaSecondary": "Get Involved",
+    "scroll": "Scroll",
+    "slide1Title": "Improving health, transforming lives",
+    "slide1Sub": "30+ years strengthening management for healthier communities across Bangladesh.",
+    "slide2Title": "Strengthening public health systems",
+    "slide2Sub": "Working with government, UN agencies and partners to deliver lasting impact.",
+    "slide3Title": "Standing with communities in crisis",
+    "slide3Sub": "Rapid, coordinated humanitarian response when it matters most."
+  },
+  "topbar": {
+    "tagline": "Improving Health Through Strengthening Management",
+    "since": "Serving Bangladesh since 1994"
+  },
+  "impact": {
+    "title": "Three decades of measurable change",
+    "subtitle": "We don't just run programs — we strengthen the systems that sustain them.",
+    "lead": "From public health and humanitarian response to climate resilience and gender equality, our work is built on partnership, accountability and local capacity.",
+    "b1": "Trusted by government, UN agencies and global donors",
+    "b2": "Transparent grant and financial management",
+    "b3": "Community-led, locally-owned solutions",
+    "b4": "Evidence-driven, research-backed programs",
+    "cta": "About PHD"
+  },
+  "stories": {
+    "title": "Stories & Updates",
+    "subtitle": "News, success stories and field updates from across our programs.",
+    "viewAll": "View all news",
+    "s1Tag": "Public Health",
+    "s1Title": "Strengthening community health systems",
+    "s1Excerpt": "Expanding access to quality primary healthcare in underserved districts.",
+    "s2Tag": "Humanitarian",
+    "s2Title": "Emergency response in climate-affected areas",
+    "s2Excerpt": "Coordinated relief reaching families displaced by flooding and cyclones.",
+    "s3Tag": "Capacity Development",
+    "s3Title": "Training the next generation of changemakers",
+    "s3Excerpt": "Building skills and institutions for sustainable local impact."
+  },
+  "partners": {
+    "title": "Working with trusted partners",
+    "subtitle": "Government institutions, UN agencies, development partners and NGOs."
+  },
+  "gallery": {
+    "title": "Moments from the field",
+    "subtitle": "A glimpse of the people and communities at the heart of our work.",
+    "cta": "View gallery"
+  },
+  "newsletter": {
+    "title": "Stay connected with PHD",
+    "subtitle": "Get the latest stories, reports and opportunities in your inbox.",
+    "placeholder": "Enter your email",
+    "button": "Subscribe"
   },
   "stats": {
     "years": "Years of Experience",
@@ -72,10 +122,6 @@
     "title": "Where We Work",
     "subtitle": "Reaching vulnerable and marginalized communities across Bangladesh.",
     "body": "From the coastal climate-vulnerable belt to remote rural districts and urban informal settlements, our programs span the country in partnership with local and national stakeholders."
-  },
-  "impact": {
-    "title": "Our Impact",
-    "subtitle": "Three decades of measurable change in health and development."
   },
   "news": {
     "title": "News & Media",

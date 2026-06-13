@@ -3,6 +3,7 @@ import {useTranslations} from 'next-intl';
 import {Link} from '@/i18n/navigation';
 import {Briefcase, Users, Handshake, ArrowRight} from 'lucide-react';
 import PageHero from '@/components/shared/PageHero';
+import {IMG} from '@/lib/images';
 import type {Metadata} from 'next';
 
 type Props = {params: Promise<{locale: string}>};
@@ -31,7 +32,7 @@ function Content() {
 
   return (
     <>
-      <PageHero title={t('title')} subtitle={t('subtitle')} />
+      <PageHero title={t("title")} subtitle={t("subtitle")} image={IMG.volunteer} />
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
