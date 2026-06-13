@@ -59,6 +59,7 @@ export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
+  const [deskOpen, setDeskOpen] = useState<string | null>(null);
 
   const isActive = (href?: string) =>
     !href ? false : href === '/' ? pathname === '/' : pathname.startsWith(href);
@@ -107,20 +108,37 @@ export default function Header() {
           <nav className="hidden items-center gap-0.5 lg:flex">
             {NAV.map((entry) =>
               entry.children ? (
-                <div key={entry.key} className="group relative">
+                <div
+                  key={entry.key}
+                  className="relative"
+                  onMouseEnter={() => setDeskOpen(entry.key)}
+                  onMouseLeave={() => setDeskOpen(null)}
+                >
                   <button
+                    aria-expanded={deskOpen === entry.key}
+                    onClick={() => setDeskOpen((g) => (g === entry.key ? null : entry.key))}
                     className={`flex items-center gap-1 rounded-md px-3 py-2 text-sm font-semibold transition-colors ${
                       groupActive(entry) ? 'text-phd-gold' : 'text-white/90 hover:text-phd-gold'
                     }`}
                   >
                     {t(entry.key)}
-                    <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
+                    <ChevronDown
+                      size={14}
+                      className={`transition-transform ${deskOpen === entry.key ? 'rotate-180' : ''}`}
+                    />
                   </button>
-                  <div className="invisible absolute left-0 top-full z-50 min-w-[16rem] translate-y-1 rounded-xl border border-phd-gray bg-white p-2 opacity-0 shadow-xl transition-all duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                  <div
+                    className={`absolute left-0 top-full z-50 min-w-[16rem] rounded-xl border border-phd-gray bg-white p-2 shadow-xl transition-all duration-150 ${
+                      deskOpen === entry.key
+                        ? 'visible translate-y-0 opacity-100'
+                        : 'invisible translate-y-1 opacity-0'
+                    }`}
+                  >
                     {entry.children.map((leaf) => (
                       <Link
                         key={leaf.href + leaf.key}
                         href={leaf.href}
+                        onClick={() => setDeskOpen(null)}
                         className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
                           isActive(leaf.href)
                             ? 'bg-phd-primary/10 text-phd-primary'
