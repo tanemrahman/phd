@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Who We Are",
+    "whatWeDo": "What We Do",
+    "whereWeWork": "Where We Work",
+    "news": "News & Media",
+    "getInvolved": "Get Involved",
+    "contact": "Contact Us"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "getInTouch": "Get in Touch",
+    "ourPrograms": "Our Programs"
+  },
+  "hero": {
+    "tagline": "Improving Health Through Strengthening Management",
+    "title": "Partners in Health and Development",
+    "subtitle": "A national non-profit with over 30 years of experience improving the health and wellbeing of vulnerable and marginalized populations across Bangladesh.",
+    "ctaPrimary": "Explore Our Work",
+    "ctaSecondary": "Get Involved"
+  },
+  "stats": {
+    "years": "Years of Experience",
+    "programs": "Programs Delivered",
+    "districts": "Districts Reached",
+    "partners": "Development Partners"
+  },
+  "programs": {
+    "title": "What We Do",
+    "subtitle": "Six core areas through which we strengthen health and development outcomes across Bangladesh.",
+    "grant": {
+      "title": "Grant Management",
+      "desc": "Transparent grant management and financial oversight for donors and partners."
+    },
+    "implementation": {
+      "title": "Program Implementation",
+      "desc": "Designing and delivering impactful public health and development projects."
+    },
+    "technical": {
+      "title": "Technical Assistance",
+      "desc": "Specialized technical support to partner organizations and government bodies."
+    },
+    "capacity": {
+      "title": "Capacity Development",
+      "desc": "Training and institutional strengthening for sustainable local impact."
+    },
+    "academic": {
+      "title": "Academic Programme",
+      "desc": "Academic and educational initiatives advancing public health knowledge."
+    },
+    "humanitarian": {
+      "title": "Humanitarian Response",
+      "desc": "Rapid, coordinated emergency response for crisis-affected communities."
+    }
+  },
+  "about": {
+    "title": "Who We Are",
+    "subtitle": "Strengthening management for a healthier Bangladesh",
+    "lead": "Partners in Health and Development (PHD) is a national non-profit development organization in Bangladesh with over 30 years of experience.",
+    "body": "We work in public health, humanitarian response, climate resilience, gender equality, research, capacity development, and partnership management. PHD works closely with government institutions, UN agencies, development partners, NGOs, and communities to improve the health and wellbeing of vulnerable and marginalized populations across Bangladesh.",
+    "missionTitle": "Our Mission",
+    "mission": "To improve the health and wellbeing of vulnerable and marginalized populations by strengthening management and building local capacity.",
+    "visionTitle": "Our Vision",
+    "vision": "A Bangladesh where every community has equitable access to quality health and development services.",
+    "valuesTitle": "Our Values",
+    "values": "Integrity, accountability, equity, partnership, and a relentless focus on impact."
+  },
+  "where": {
+    "title": "Where We Work",
+    "subtitle": "Reaching vulnerable and marginalized communities across Bangladesh.",
+    "body": "From the coastal climate-vulnerable belt to remote rural districts and urban informal settlements, our programs span the country in partnership with local and national stakeholders."
+  },
+  "impact": {
+    "title": "Our Impact",
+    "subtitle": "Three decades of measurable change in health and development."
+  },
+  "news": {
+    "title": "News & Media",
+    "subtitle": "Latest updates, stories, and announcements from PHD.",
+    "empty": "Stories and updates will appear here soon."
+  },
+  "getInvolved": {
+    "title": "Get Involved",
+    "subtitle": "Partner with us, join our team, or collaborate as a consultant.",
+    "careers": "Careers & Vacancies",
+    "careersDesc": "Explore current openings and grow your career with PHD.",
+    "consulting": "Consultancy",
+    "consultingDesc": "Collaborate with us as an individual consultant or firm.",
+    "partnership": "Partnerships",
+    "partnershipDesc": "Build strategic partnerships to expand our shared impact."
+  },
+  "cta": {
+    "title": "Let's build healthier communities together",
+    "subtitle": "Partner with PHD to strengthen health and development across Bangladesh.",
+    "button": "Contact Us"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We'd love to hear from you.",
+    "office": "Head Office",
+    "address": "House # SWD 12/A, Road # 08, Gulshan-1, Dhaka-1212, Bangladesh",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "formName": "Your Name",
+    "formEmail": "Your Email",
+    "formSubject": "Subject",
+    "formMessage": "Your Message",
+    "formSubmit": "Send Message",
+    "formSuccess": "Thank you! Your message has been received."
+  },
+  "footer": {
+    "about": "Partners in Health and Development (PHD) — improving health through strengthening management.",
+    "quickLinks": "Quick Links",
+    "programs": "Programs",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "rights": "All Rights Reserved."
+  }
+}
